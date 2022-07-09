@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 // --------------------
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -15,8 +16,20 @@
 
 .container {
     position: relative;
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
+
+    @media (max-width:1180px) {
+        max-width: 970px;
+    }
+    
+    @media (max-width:992px){
+        max-width: 750px;
+    }
+    
+    @media (max-width:767px){
+        max-width: none;
+    }
 }
 
 .active{
@@ -236,7 +249,7 @@
         justify-content: start;
         align-items: center;
         margin-bottom: 20px;
-        width: 50%;
+        flex: 0 1 50%;
         cursor: pointer;
         transition: .2s;
 
@@ -472,7 +485,7 @@ table{
     }
 
     &__body {
-        flex: 0 0 375px;
+        flex: 0 0 31.779%;
     }
 
     &__title {
@@ -962,3 +975,6 @@ table{
         }
     }
 }
+
+//-------------------- MEDIA
+
